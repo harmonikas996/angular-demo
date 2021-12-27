@@ -1,0 +1,5 @@
+<div class="container h-100">
+    <div class="card">
+        <h3>Enter quantity <input type="number" min="1" [formControl]="name" placeholder="1"> and go to <a [routerLink]="name.value ? '/checkout' : null" [queryParams]="{qty: name.value}" [ngClass]="name.value ? '' : 'disabled'"><code>CHECKOUT</code></a> page</h3>
+    </div>
+</div>
