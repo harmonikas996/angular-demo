@@ -1,0 +1,12 @@
+version: '3'
+services:
+
+  # Angular
+  eyesofai-angular-demo:
+    build: .
+    container_name: eyesofai-angular-demo
+    restart: unless-stopped
+    volumes:
+      - ./nginx/conf.d/nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "80:80"
